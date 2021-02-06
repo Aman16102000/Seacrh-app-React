@@ -28,7 +28,44 @@ class Search extends React.Component {
      //   var changeNum=0;
  //  console.log(ob[0].name);
 		return (
-			  <div className="container-fluid">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-4 col-sm-4"></div>
+                    <div className="col-4 col-sm-4"><input type="text" onChange={this.change}  value={this.state.value}></input></div>
+                    <div className="col-4 col-sm-4"></div>
+                </div>
+                <div className="row">
+                <div className="col-4 col-sm-4"></div>
+                    <div className="col-4 col-sm-4">
+                    <div className="card card-body" >
+                   
+                        <ul className="list-group list-group-flush">
+                        <div className="row list-head">
+                                                <div className="col-4 col-sm-4 pl-4 pt-2"><b>Name</b></div>
+                                                <div className="col-4 col-sm-4"></div>
+                                                <div className="col-4 col-sm-4 pt-2"><b>Locations</b></div>
+                                            </div>
+                            {
+                                  this.state.filteredItem.map((e)=>{
+                                    return (
+                                        <li className="list-group-item card-body">
+                                            
+                                            <div className="row">
+                                                <div className="col-4 col-sm-4">{e.name}</div>
+                                                <div className="col-4 col-sm-4"></div>
+                                                <div className="col-4 col-sm-4">{e.location}</div>
+                                            </div>
+                                        </li>
+                                        )
+                                })
+                            }
+                         </ul>
+                     </div>
+                    </div>
+                    <div className="col-4 col-sm-4"></div>
+                </div>
+            </div>
+			 /*  <div className="container-fluid">
                     <div className="row">
                         <div className="col-4"></div>
 				<div ><input  type="text" className="con" onChange={this.change} value={this.state.value} placeholder="Search Your Name" ></input></div>
@@ -70,7 +107,7 @@ class Search extends React.Component {
                 </div>
                 <div className="col-4"></div>
                 </div>
-              </div>
+              </div> */
 		)
 	}
 }

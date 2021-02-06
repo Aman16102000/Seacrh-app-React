@@ -1,4 +1,4 @@
-
+/* 
 .scroll{
   background-color: #eee;
   width: 400px;
@@ -21,4 +21,19 @@
 .con{
   width: 550px;
   border: 1px dotted black;
+} */
+input{
+  margin-top: 50px;
+  width: 540px;
+  height: 55px;
+  font-size: x-large;
+  background-color: whitesmoke;
+
+}
+.list-head{
+
+height: 45px;
+}
+.card-body{
+background-color: #8628b4;
 }
