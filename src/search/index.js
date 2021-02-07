@@ -14,7 +14,7 @@ class Search extends React.Component {
             value:searchedName
         })
         var arr=ob.filter((e)=>{
-            if(e.name.startsWith(searchedName))
+            if(e.name.toLowerCase().startsWith(searchedName.toLowerCase()))
             return e;
             
         })
@@ -31,16 +31,25 @@ class Search extends React.Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-4 col-sm-4"></div>
-                    <div className="col-4 col-sm-4"><input type="text" onChange={this.change}  value={this.state.value}></input></div>
+                    <div className="col-4 col-sm-4">
+
+                    <form>
+                            <div className="form-group-row">
+                                <div className="col-xs-4">
+                                  <input className="form-control" type="text" onChange={this.change}  value={this.state.value} placeholder="Search employee name" ></input>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                     <div className="col-4 col-sm-4"></div>
                 </div>
-                <div className="row">
+                <div className="row mt-3">
                 <div className="col-4 col-sm-4"></div>
                     <div className="col-4 col-sm-4">
-                    <div className="card card-body" >
+                    <div className="card card-body scrollClass" >
                    
-                        <ul className="list-group list-group-flush">
-                        <div className="row list-head">
+                        <ul className="list-group list-group-flush ">
+                        <div className="row list-head ">
                                                 <div className="col-4 col-sm-4 pl-4 pt-2"><b>Name</b></div>
                                                 <div className="col-4 col-sm-4"></div>
                                                 <div className="col-4 col-sm-4 pt-2"><b>Locations</b></div>
@@ -48,6 +57,8 @@ class Search extends React.Component {
                             {
                                   this.state.filteredItem.map((e)=>{
                                     return (
+                                     
+
                                         <li className="list-group-item card-body">
                                             
                                             <div className="row">
@@ -56,6 +67,7 @@ class Search extends React.Component {
                                                 <div className="col-4 col-sm-4">{e.location}</div>
                                             </div>
                                         </li>
+                                       
                                         )
                                 })
                             }

@@ -1,48 +1,48 @@
 const employee=[
     {
-        name:"sagar",
-        location:"chandigarh"
+        name:"Sagar",
+        location:"Kaithal"
     },
     {
-        name:"aman",
-        location:"patiala"
+        name:"Rahul",
+        location:"Chandigarh"
     },
     {
-        name:"aayush",
-        location:"sonipat"
+        name:"Rahul KL",
+        location:"Banglore"
     },
     {
-        name:"ani",
-        location:"ropar"
+        name:"Sant",
+        location:"Yamuna Nagar"
     },
 
     {
-        name:"khushwinder",
-        location:"pathankot"
+        name:"Sumit",
+        location:"Chandigarh"
     },
     {
-        name:"maa",
-        location:"kothikohar"
+        name:"Ritvik",
+        location:"Kaithal"
     },
     {
-        name:"mamta",
+        name:"Mamta",
         location:"mumbai"
     },
     {
-        name:"prem",
+        name:"Prem",
         location:"delhi"
     }
     ,
     {
-        name:"papa",
-        location:"bir"
+        name:"Rohan",
+        location:"Bir"
     },{
-        name:"ram",
-        location:"bharat"
+        name:"Sachin",
+        location:"Mumbai"
     },
     {
-        name:"sham",
-        location:"bharat"
+        name:"Virat",
+        location:"Delhi"
     }
 ]
 export default employee;
